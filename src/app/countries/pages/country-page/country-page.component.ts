@@ -18,7 +18,11 @@ export class CountryPageComponent implements OnInit{
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private countriesService: CountriesService,
-    ) {}
+  ) {}
+
+  get translations() {
+    return Object.values(this.country!.translations);
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params
